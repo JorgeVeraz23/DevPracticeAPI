@@ -1,8 +1,10 @@
 ﻿using Data.Interfaces.CatalogsInterfaces;
+using Data.Interfaces.DevPracticesInterfaces.CarritoDeComprasInterface;
 using Data.Interfaces.SecurityInterfaces;
 using Data.Interfaces.TemplateInterfaces;
 using Data.Interfaces.UserInterfaces;
 using Data.Repository.CatalogsRepository;
+using Data.Repository.DevPracticeRepository.CarritoDeComprasRepository;
 using Data.Repository.TemplateRepository;
 using Data.Repository.UtilitiesRepository;
 
@@ -27,6 +29,10 @@ namespace Data
     {
         public static IServiceCollection DependencyEF(this IServiceCollection services, IConfiguration configuration)
         {
+
+            services.AddScoped<ProductosInterface, ProductoRepository>();
+            services.AddScoped<UsuarioInterface, UsuarioRepository>();
+
             services.AddScoped<IdentityDbContext<ApplicationUser, ApplicationRole, string>, ApplicationDbContext>();
             services.AddScoped<IUnitOfWorkRepository, UnitOfWorkRepository>();
 

@@ -1,4 +1,5 @@
 ﻿using Data.Entities.Configurations;
+using Data.Entities.DevPracticeEntities.CarritoDeComprasTutoEntities;
 using LinkQuality.Data.Repository.UtilitiesRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -21,6 +22,11 @@ namespace Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { 
         
         }
+
+        #region 
+        public virtual DbSet<Usuarios> Usuarios { get; set; }
+        public virtual DbSet<Productos> Productos { get; set; }
+        #endregion
 
         #region RESOURCE
         public virtual DbSet<Logs> Logs { get; set; }
