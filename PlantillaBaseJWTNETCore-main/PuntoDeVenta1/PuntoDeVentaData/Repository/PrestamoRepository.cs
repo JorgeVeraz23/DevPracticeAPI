@@ -17,11 +17,11 @@ namespace Data.Repository
             _context = context;
         }
 
-        public async Task<List<HistorialPrestamoDTO>> ObtenerPrestamoEnMes(long idUsuario)
+        public async Task<List<HistorialPrestamoDTO>> ObtenerPrestamosDelMesActual(long idUsuario)
         {
-            var MesActual = DateTime.Now;
+            var FechaActual = DateTime.Now;
 
-            var verHistorialPrestamo = await _context.Prestamos.Where(x => x.Active && x.FechaPrestamos.Date.Month == MesActual.Month && x.UsuarioBiblioteca!.IdUsuario == idUsuario).Select(c => new HistorialPrestamoDTO
+            var verHistorialPrestamo = await _context.Prestamos.Where(x => x.Active && x.FechaPrestamos.Year == FechaActual.Year && x.FechaPrestamos.Date.Month == FechaActual.Month && x.UsuarioBiblioteca!.IdUsuario == idUsuario).Select(c => new HistorialPrestamoDTO
             {
                 FechaPrestamo = c.FechaPrestamos,
                 NombreLibro = c.Libro!.Titulo,

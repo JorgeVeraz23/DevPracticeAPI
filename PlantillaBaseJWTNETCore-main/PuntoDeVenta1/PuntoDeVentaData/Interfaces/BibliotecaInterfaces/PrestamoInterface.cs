@@ -9,6 +9,6 @@ namespace Data.Interfaces.BibliotecaInterfaces
 {
     public interface PrestamoInterface
     {
-        public Task<List<HistorialPrestamoDTO>> ObtenerPrestamoEnMes(long idUsuario);
+        public Task<List<HistorialPrestamoDTO>> ObtenerPrestamosDelMesActual(long idUsuario);
     }
 }

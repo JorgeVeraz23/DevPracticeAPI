@@ -26,7 +26,7 @@ namespace PuntoDeVentaAPI.Controllers.BibliotecaController
         {
             try
             {
-                var resultado = await _prestamoInterface.ObtenerPrestamoEnMes(idUsuario);
+                var resultado = await _prestamoInterface.ObtenerPrestamosDelMesActual(idUsuario);
                 return Ok(resultado);
             }catch(Exception ex)
             {

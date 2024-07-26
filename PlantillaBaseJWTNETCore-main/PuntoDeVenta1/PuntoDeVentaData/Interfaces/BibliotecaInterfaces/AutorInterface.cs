@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data.Dto.BibliotecaDTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,7 @@ namespace Data.Interfaces.BibliotecaInterfaces
 {
     public interface AutorInterface
     {
+
+        public Task<List<AutorDTO>> GetAutoresLibros();
     }
 }
