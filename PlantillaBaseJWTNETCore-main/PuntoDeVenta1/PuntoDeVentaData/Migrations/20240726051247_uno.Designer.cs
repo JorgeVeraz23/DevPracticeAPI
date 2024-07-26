@@ -12,18 +12,276 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240526001932_2")]
-    partial class _2
+    [Migration("20240726051247_uno")]
+    partial class uno
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.4")
+                .HasAnnotation("ProductVersion", "8.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Data.Entities.Biblioteca.Autor", b =>
+                {
+                    b.Property<long>("IdAutor")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("IdAutor"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("DateDelete")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateRegister")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IpDelete")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("IpModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("IpRegister")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<long?>("LibroIdLibro")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Nacionalidad")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserDelete")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserRegister")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("IdAutor");
+
+                    b.HasIndex("LibroIdLibro");
+
+                    b.ToTable("Autors");
+                });
+
+            modelBuilder.Entity("Data.Entities.Biblioteca.Libro", b =>
+                {
+                    b.Property<long>("IdLibro")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("IdLibro"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<long?>("AutorIdAutor")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("AñoPublicacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateDelete")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateRegister")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IpDelete")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("IpModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("IpRegister")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserDelete")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserRegister")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("IdLibro");
+
+                    b.HasIndex("AutorIdAutor");
+
+                    b.ToTable("Libros");
+                });
+
+            modelBuilder.Entity("Data.Entities.Biblioteca.Prestamos", b =>
+                {
+                    b.Property<long>("IdPrestamo")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("IdPrestamo"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("DateDelete")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateRegister")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaDevolucion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaPrestamos")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IpDelete")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("IpModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("IpRegister")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<long?>("LibroIdLibro")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("UserDelete")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserRegister")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<long?>("UsuarioBibliotecaIdUsuario")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("IdPrestamo");
+
+                    b.HasIndex("LibroIdLibro");
+
+                    b.HasIndex("UsuarioBibliotecaIdUsuario");
+
+                    b.ToTable("Prestamos");
+                });
+
+            modelBuilder.Entity("Data.Entities.Biblioteca.UsuarioBiblioteca", b =>
+                {
+                    b.Property<long>("IdUsuario")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("IdUsuario"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("DateDelete")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateRegister")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("IpDelete")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("IpModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("IpRegister")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserDelete")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserModification")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserRegister")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("IdUsuario");
+
+                    b.ToTable("UsuarioBibliotecas");
+                });
 
             modelBuilder.Entity("Data.Entities.Configurations.ApplicationVersion", b =>
                 {
@@ -1617,6 +1875,37 @@ namespace Data.Migrations
                     b.ToTable("Notificacions");
                 });
 
+            modelBuilder.Entity("Data.Entities.Biblioteca.Autor", b =>
+                {
+                    b.HasOne("Data.Entities.Biblioteca.Libro", null)
+                        .WithMany("Autors")
+                        .HasForeignKey("LibroIdLibro");
+                });
+
+            modelBuilder.Entity("Data.Entities.Biblioteca.Libro", b =>
+                {
+                    b.HasOne("Data.Entities.Biblioteca.Autor", "Autor")
+                        .WithMany()
+                        .HasForeignKey("AutorIdAutor");
+
+                    b.Navigation("Autor");
+                });
+
+            modelBuilder.Entity("Data.Entities.Biblioteca.Prestamos", b =>
+                {
+                    b.HasOne("Data.Entities.Biblioteca.Libro", "Libro")
+                        .WithMany("Prestamos")
+                        .HasForeignKey("LibroIdLibro");
+
+                    b.HasOne("Data.Entities.Biblioteca.UsuarioBiblioteca", "UsuarioBiblioteca")
+                        .WithMany("Prestamos")
+                        .HasForeignKey("UsuarioBibliotecaIdUsuario");
+
+                    b.Navigation("Libro");
+
+                    b.Navigation("UsuarioBiblioteca");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("PuntoDeVentaData.Entities.Security.ApplicationRole", null)
@@ -1708,6 +1997,18 @@ namespace Data.Migrations
                         .HasForeignKey("userOrigenId");
 
                     b.Navigation("userOrigen");
+                });
+
+            modelBuilder.Entity("Data.Entities.Biblioteca.Libro", b =>
+                {
+                    b.Navigation("Autors");
+
+                    b.Navigation("Prestamos");
+                });
+
+            modelBuilder.Entity("Data.Entities.Biblioteca.UsuarioBiblioteca", b =>
+                {
+                    b.Navigation("Prestamos");
                 });
 
             modelBuilder.Entity("PuntoDeVentaData.Entities.Parameters.ParameterType", b =>

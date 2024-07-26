@@ -175,6 +175,13 @@ C:\Users\USER\source\repos\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\Micros
 C:\Users\USER\source\repos\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\USER\source\repos\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\Moq.dll
 C:\Users\USER\source\repos\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.csproj.AssemblyReference.cache
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.AssemblyInfoInputs.cache
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.AssemblyInfo.cs
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.sourcelink.json
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\appsettings.json
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\PuntoDeVentaAPI.exe
@@ -331,14 +338,6 @@ C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDe
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\Data.dll
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\Data.pdb
-C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.csproj.AssemblyReference.cache
-C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.AssemblyInfoInputs.cache
-C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.AssemblyInfo.cs
-C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.csproj.CoreCompileInputs.cache
-C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.sourcelink.json
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\staticwebassets\msbuild.PuntoDeVentaAPI.Microsoft.AspNetCore.StaticWebAssets.props
@@ -353,3 +352,6 @@ C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDe
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.pdb
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.genruntimeconfig.cache
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\ref\PuntoDeVentaAPI.dll
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\System.ClientModel.dll
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.MvcApplicationPartsAssemblyInfo.cs

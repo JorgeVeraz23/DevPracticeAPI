@@ -215,6 +215,31 @@ namespace Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Productos",
+                columns: table => new
+                {
+                    IdProductos = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Precio = table.Column<long>(type: "bigint", nullable: false),
+                    Categoria = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Active = table.Column<bool>(type: "bit", nullable: false),
+                    UserRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    DateRegister = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IpRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateModification = table.Column<DateTime>(type: "datetime2", maxLength: 100, nullable: true),
+                    IpModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateDelete = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IpDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Productos", x => x.IdProductos);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Role",
                 schema: "SEG",
                 columns: table => new
@@ -279,6 +304,56 @@ namespace Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UsuarioBibliotecas",
+                columns: table => new
+                {
+                    IdUsuario = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Active = table.Column<bool>(type: "bit", nullable: false),
+                    UserRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    DateRegister = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IpRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateModification = table.Column<DateTime>(type: "datetime2", maxLength: 100, nullable: true),
+                    IpModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateDelete = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IpDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UsuarioBibliotecas", x => x.IdUsuario);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Usuarios",
+                columns: table => new
+                {
+                    IdUsuario = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Apellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Contraseña = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Active = table.Column<bool>(type: "bit", nullable: false),
+                    UserRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    DateRegister = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IpRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateModification = table.Column<DateTime>(type: "datetime2", maxLength: 100, nullable: true),
+                    IpModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateDelete = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IpDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Usuarios", x => x.IdUsuario);
                 });
 
             migrationBuilder.CreateTable(
@@ -512,6 +587,97 @@ namespace Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Autors",
+                columns: table => new
+                {
+                    IdAutor = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Nacionalidad = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false),
+                    LibroIdLibro = table.Column<long>(type: "bigint", nullable: true),
+                    Active = table.Column<bool>(type: "bit", nullable: false),
+                    UserRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    DateRegister = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IpRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateModification = table.Column<DateTime>(type: "datetime2", maxLength: 100, nullable: true),
+                    IpModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateDelete = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IpDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Autors", x => x.IdAutor);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Libros",
+                columns: table => new
+                {
+                    IdLibro = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Titulo = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    AñoPublicacion = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    AutorIdAutor = table.Column<long>(type: "bigint", nullable: true),
+                    Active = table.Column<bool>(type: "bit", nullable: false),
+                    UserRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    DateRegister = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IpRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateModification = table.Column<DateTime>(type: "datetime2", maxLength: 100, nullable: true),
+                    IpModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateDelete = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IpDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Libros", x => x.IdLibro);
+                    table.ForeignKey(
+                        name: "FK_Libros_Autors_AutorIdAutor",
+                        column: x => x.AutorIdAutor,
+                        principalTable: "Autors",
+                        principalColumn: "IdAutor");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Prestamos",
+                columns: table => new
+                {
+                    IdPrestamo = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FechaPrestamos = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    FechaDevolucion = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    LibroIdLibro = table.Column<long>(type: "bigint", nullable: true),
+                    UsuarioBibliotecaIdUsuario = table.Column<long>(type: "bigint", nullable: true),
+                    Active = table.Column<bool>(type: "bit", nullable: false),
+                    UserRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    DateRegister = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IpRegister = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateModification = table.Column<DateTime>(type: "datetime2", maxLength: 100, nullable: true),
+                    IpModification = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    UserDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    DateDelete = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IpDelete = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Prestamos", x => x.IdPrestamo);
+                    table.ForeignKey(
+                        name: "FK_Prestamos_Libros_LibroIdLibro",
+                        column: x => x.LibroIdLibro,
+                        principalTable: "Libros",
+                        principalColumn: "IdLibro");
+                    table.ForeignKey(
+                        name: "FK_Prestamos_UsuarioBibliotecas_UsuarioBibliotecaIdUsuario",
+                        column: x => x.UsuarioBibliotecaIdUsuario,
+                        principalTable: "UsuarioBibliotecas",
+                        principalColumn: "IdUsuario");
+                });
+
             migrationBuilder.InsertData(
                 table: "EmailTemplates",
                 columns: new[] { "IdEmailTemplate", "Active", "Body", "DateDelete", "DateModification", "DateRegister", "Enumerator", "IpDelete", "IpModification", "IpRegister", "Params", "Subject", "UserDelete", "UserModification", "UserRegister" },
@@ -601,6 +767,16 @@ namespace Data.Migrations
                 values: new object[] { 3L, true, null, null, new DateTime(2024, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), 7L, "2c5e174e-3b0e-446f-86af-483d56fd7210", null, null, "0.0.0.0", false, true, true, false, true, false, false, false, true, null, null, null, "CreacionInicial" });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Autors_LibroIdLibro",
+                table: "Autors",
+                column: "LibroIdLibro");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Libros_AutorIdAutor",
+                table: "Libros",
+                column: "AutorIdAutor");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_MenuRoles_IdMenu",
                 table: "MenuRoles",
                 column: "IdMenu");
@@ -624,6 +800,16 @@ namespace Data.Migrations
                 name: "IX_Parameters_TypeParameterIdTypeParameter",
                 table: "Parameters",
                 column: "TypeParameterIdTypeParameter");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Prestamos_LibroIdLibro",
+                table: "Prestamos",
+                column: "LibroIdLibro");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Prestamos_UsuarioBibliotecaIdUsuario",
+                table: "Prestamos",
+                column: "UsuarioBibliotecaIdUsuario");
 
             migrationBuilder.CreateIndex(
                 name: "RoleNameIndex",
@@ -670,11 +856,22 @@ namespace Data.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Autors_Libros_LibroIdLibro",
+                table: "Autors",
+                column: "LibroIdLibro",
+                principalTable: "Libros",
+                principalColumn: "IdLibro");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropForeignKey(
+                name: "FK_Autors_Libros_LibroIdLibro",
+                table: "Autors");
+
             migrationBuilder.DropTable(
                 name: "ApplicationVersions");
 
@@ -700,6 +897,12 @@ namespace Data.Migrations
                 name: "Parameters");
 
             migrationBuilder.DropTable(
+                name: "Prestamos");
+
+            migrationBuilder.DropTable(
+                name: "Productos");
+
+            migrationBuilder.DropTable(
                 name: "RoleClaim",
                 schema: "SEG");
 
@@ -720,10 +923,16 @@ namespace Data.Migrations
                 schema: "SEG");
 
             migrationBuilder.DropTable(
+                name: "Usuarios");
+
+            migrationBuilder.DropTable(
                 name: "Menus");
 
             migrationBuilder.DropTable(
                 name: "ParameterTypes");
+
+            migrationBuilder.DropTable(
+                name: "UsuarioBibliotecas");
 
             migrationBuilder.DropTable(
                 name: "Role",
@@ -732,6 +941,12 @@ namespace Data.Migrations
             migrationBuilder.DropTable(
                 name: "Users",
                 schema: "SEG");
+
+            migrationBuilder.DropTable(
+                name: "Libros");
+
+            migrationBuilder.DropTable(
+                name: "Autors");
         }
     }
 }

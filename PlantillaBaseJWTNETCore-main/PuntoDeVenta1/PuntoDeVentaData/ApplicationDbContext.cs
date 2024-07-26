@@ -1,4 +1,5 @@
-﻿using Data.Entities.Configurations;
+﻿using Data.Entities.Biblioteca;
+using Data.Entities.Configurations;
 using Data.Entities.DevPracticeEntities.CarritoDeComprasTutoEntities;
 using LinkQuality.Data.Repository.UtilitiesRepository;
 using Microsoft.AspNetCore.Identity;
@@ -22,6 +23,12 @@ namespace Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { 
         
         }
+
+        public DbSet<Prestamos> Prestamos { get; set; }
+        public DbSet<UsuarioBiblioteca> UsuarioBibliotecas { get; set; }
+        public DbSet<Libro> Libros { get; set; }
+        public DbSet<Autor> Autors { get; set; }
+
 
         #region 
         public virtual DbSet<Usuarios> Usuarios { get; set; }
