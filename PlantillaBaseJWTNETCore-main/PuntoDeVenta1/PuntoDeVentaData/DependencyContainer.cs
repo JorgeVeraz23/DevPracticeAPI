@@ -5,6 +5,7 @@ using Data.Interfaces.SecurityInterfaces;
 using Data.Interfaces.TemplateInterfaces;
 using Data.Interfaces.UserInterfaces;
 using Data.Repository;
+using Data.Repository.Biblioteca;
 using Data.Repository.CatalogsRepository;
 using Data.Repository.DevPracticeRepository.CarritoDeComprasRepository;
 using Data.Repository.TemplateRepository;
@@ -33,6 +34,8 @@ namespace Data
         {
 
             services.AddScoped<PrestamoInterface, PrestamoRepository>();
+            services.AddScoped<AutorInterface, AutorRepository>();
+            services.AddScoped<LibroInterface,LibroRepository>();
 
             services.AddScoped<ProductosInterface, ProductoRepository>();
             services.AddScoped<UsuarioInterface, UsuarioRepository>();

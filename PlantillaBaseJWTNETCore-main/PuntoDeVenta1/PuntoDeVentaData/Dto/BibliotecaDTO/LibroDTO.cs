@@ -11,7 +11,7 @@ namespace Data.Dto.BibliotecaDTO
 {
     public class LibroDTO
     {
-   
+
         public long IdLibro { get; set; }
         [MaxLength(100)]
         public string Titulo { get; set; } = "";
@@ -20,5 +20,21 @@ namespace Data.Dto.BibliotecaDTO
         public DateTime AñoPublicacion { get; set; }
         public virtual Prestamos Prestamos { get; set; }
         public virtual Autor? Autor { get; set; }
+    }
+
+    public class CrearLibroDto
+    {
+        public long IdLibro { get; set; }
+        public string Titulo { get; set; }
+        public DateTime AñoPublicacion { get; set; }
+        public long AutorId { get; set; }
+
+        public class CantidadLibrosDeAutor
+        {
+            public long IdLibro { get; set; }
+            public string Titulo { get; set; }
+            public int CantidadLibros { get; set; }
+            public virtual ICollection<AutorDTO> Autors { get; set; }
+        }
     }
 }
