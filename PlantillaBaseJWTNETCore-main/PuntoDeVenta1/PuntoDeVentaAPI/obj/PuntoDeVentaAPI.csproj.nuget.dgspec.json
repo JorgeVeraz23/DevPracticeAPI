@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Documents\\repo\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaAPI\\PuntoDeVentaAPI.csproj": {}
+    "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaAPI\\PuntoDeVentaAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Documents\\repo\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaAPI\\PuntoDeVentaAPI.csproj": {
+    "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaAPI\\PuntoDeVentaAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Documents\\repo\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaAPI\\PuntoDeVentaAPI.csproj",
+        "projectUniqueName": "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaAPI\\PuntoDeVentaAPI.csproj",
         "projectName": "PuntoDeVentaAPI",
-        "projectPath": "C:\\Users\\USER\\Documents\\repo\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaAPI\\PuntoDeVentaAPI.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Documents\\repo\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaAPI\\obj\\",
+        "projectPath": "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaAPI\\PuntoDeVentaAPI.csproj",
+        "packagesPath": "C:\\Users\\AppDev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AppDev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\USER\\Documents\\repo\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\Data.csproj": {
-                "projectPath": "C:\\Users\\USER\\Documents\\repo\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\Data.csproj"
+              "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\Data.csproj": {
+                "projectPath": "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\Data.csproj"
               }
             }
           }
@@ -38,6 +43,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -188,21 +198,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\USER\\Documents\\repo\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\Data.csproj": {
+    "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Documents\\repo\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\USER\\Documents\\repo\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\Data.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Documents\\repo\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\obj\\",
+        "projectPath": "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\Data.csproj",
+        "packagesPath": "C:\\Users\\AppDev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaData\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AppDev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -210,6 +224,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -222,6 +237,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -369,7 +389,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

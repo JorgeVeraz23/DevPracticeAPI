@@ -1,6 +1,7 @@
 ﻿using Data.Entities.Biblioteca;
 using Data.Entities.Configurations;
 using Data.Entities.DevPracticeEntities.CarritoDeComprasTutoEntities;
+using Data.Entities.ReservaVehiculos;
 using LinkQuality.Data.Repository.UtilitiesRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -28,6 +29,8 @@ namespace Data
         public DbSet<UsuarioBiblioteca> UsuarioBibliotecas { get; set; }
         public DbSet<Libro> Libros { get; set; }
         public DbSet<Autor> Autors { get; set; }
+        public DbSet<Reserva> Reservas { get; set; }
+        public DbSet<Vehiculo> Vehiculos { get; set; }
 
 
         #region 
