@@ -75,6 +75,55 @@ namespace PuntoDeVentaAPI.Controllers.ReservaVehiculoController
             }
         }
 
+
+        [HttpDelete]
+        [Route("EliminarReserva")]
+        public async Task<ActionResult> EliminarReserva(long IdReserva)
+        {
+            try
+            {
+                var result = await _reservaInterface.EliminarReserva(IdReserva);
+
+                if (result.Success)
+                {
+                    return Ok(result.Success);
+                }
+                else
+                {
+                    return BadRequest(result.Message);
+                }
+
+            }catch (Exception ex)
+            {
+                return StatusCode(400, new MessageInfoDTO().ErrorInterno(ex, _nombreController, "Error al eliminar los tipos de incidencia"));
+
+            }
+        }
+
+        [HttpPut]
+        [Route("ActualizarReserva")]
+        public async Task<ActionResult> ActualizarReserva(ReservaDTO reserva)
+        {
+            try
+            {
+                var result = await _reservaInterface.ActualizarReserva(reserva);
+
+                if(result.Success)
+                {
+                    return Ok(result.Success);
+                }
+                else
+                {
+                    return BadRequest(result.Message);
+                }
+
+
+            }catch(Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.BadRequest, new MessageInfoDTO().ErrorInterno(ex, _nombreController, "Errror al actualizar las reservas"));
+            }
+        }
+
         [HttpGet]
         [Route("GetAllReservas")]
         public async Task<ActionResult> GetAllReservas()

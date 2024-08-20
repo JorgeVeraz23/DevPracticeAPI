@@ -45,9 +45,28 @@ namespace Data.Repository.ReservaVehiculoRepository
 
         public async Task<MessageInfoDTO> ActualizarReserva(ReservaDTO reserva)
         {
-            var model = await _context.Reservas.Where(x => x.Active && x.IdReserva == reserva.IdReserva).FirstOrDefaultAsync() ?? throw new Exception("No se encontro la reserva");
+            try
+            {
+                var model = await _context.Reservas.Where(x => x.Active && x.IdReserva == reserva.IdReserva).FirstOrDefaultAsync() ?? throw new Exception("No se encontro la reserva");
 
-            model.
+                model.IdVehiculo = reserva.IdVehiculo;
+                model.FechaReserva = reserva.FechaReserva;
+                model.ClienteNombre = reserva.ClienteNombre;
+                model.ClienteTelefono = reserva.ClienteTelefono;
+
+                model.UserModification = _username;
+                model.DateModification = DateTime.Now;
+                model.IpModification = _ip;
+
+                await _context.SaveChangesAsync();
+
+                infoDTO.AccionCompletada("Se ha actualizado la reserva");
+                return infoDTO;
+            }
+            catch(Exception ex)
+            {
+                return infoDTO.ErrorInterno(ex, "ReservaRepository", "Error al intentar actualizar la reserva");
+            }
 
         }
 
@@ -69,9 +88,11 @@ namespace Data.Repository.ReservaVehiculoRepository
                 await _context.Reservas.AddAsync(reservaEntity);
                 await _unitOfWorkRepository.SaveChangesAsync();
 
+                // Mueve la llamada a EstablecerVehiculoNoDisponible antes del return
+                await EstablecerVehiculoNoDisponible(reserva.IdVehiculo);
+
                 infoDTO.AccionCompletada("Se ha creado la reserva");
                 return infoDTO;
-
 
 
             }catch(Exception ex)
@@ -81,14 +102,38 @@ namespace Data.Repository.ReservaVehiculoRepository
             }
         }
 
-        public Task<MessageInfoDTO> EliminarReserva(long idReserva)
+        public async  Task<MessageInfoDTO> EliminarReserva(long idReserva)
         {
-            throw new NotImplementedException();
+            var reservaToDelete = await _context.Reservas.Where(x =>x.Active && x.IdReserva  == idReserva).FirstOrDefaultAsync() ?? throw new Exception("No se encontro la reserva");
+
+            reservaToDelete.Active = false;
+            reservaToDelete.DateDelete = DateTime.Now;
+            reservaToDelete.UserDelete = _username;
+            reservaToDelete.IpDelete = _ip;
+
+            await _unitOfWorkRepository.SaveChangesAsync();
+
+            infoDTO.AccionCompletada("la reserva seleccionada a sido eliminada");
+
+            return infoDTO;
         }
 
-        public Task<MessageInfoDTO> EstablecerVehiculoNoDisponible(long idVehiculo)
+        public async Task<MessageInfoDTO> EstablecerVehiculoNoDisponible(long idVehiculo)
         {
-            throw new NotImplementedException();
+            var vehiculo = await _context.Vehiculos.FirstOrDefaultAsync(x => x.Active && x.IdVehiculo == idVehiculo) ?? throw new Exception("Ocurrio un error al buscar el vehiculo");
+
+            vehiculo.Disponible = false;
+
+            vehiculo.DateModification = DateTime.Now;
+            vehiculo.UserModification = _username;
+            vehiculo.IpModification = _ip;
+            await _unitOfWorkRepository.SaveChangesAsync();
+
+            infoDTO.AccionCompletada("Se a actualizado el estado del vehiculo");
+
+            return infoDTO;
+
+            
         }
 
         public Task<ReservaDTO> ObtenerReservaPorId(long idReserva)
