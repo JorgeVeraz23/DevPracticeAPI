@@ -2,6 +2,7 @@
 using Data.Entities.Configurations;
 using Data.Entities.DevPracticeEntities.CarritoDeComprasTutoEntities;
 using Data.Entities.ReservaVehiculos;
+using Data.Entities.TransaccionesEntreCuentas;
 using LinkQuality.Data.Repository.UtilitiesRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -31,6 +32,9 @@ namespace Data
         public DbSet<Autor> Autors { get; set; }
         public DbSet<Reserva> Reservas { get; set; }
         public DbSet<Vehiculo> Vehiculos { get; set; }
+        public DbSet<Cuenta> Cuentas { get;set; }
+        public DbSet<Transacciones> Transacciones { get; set; }
+        public DbSet<HistorialTransacciones> HistorialTransacciones { get; set; }
 
 
         #region 

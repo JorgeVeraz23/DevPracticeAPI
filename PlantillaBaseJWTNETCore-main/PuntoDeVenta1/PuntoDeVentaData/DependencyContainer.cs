@@ -4,6 +4,7 @@ using Data.Interfaces.DevPracticesInterfaces.CarritoDeComprasInterface;
 using Data.Interfaces.ReservaVehiculoInterfaces;
 using Data.Interfaces.SecurityInterfaces;
 using Data.Interfaces.TemplateInterfaces;
+using Data.Interfaces.TransaccionEntreCuentaInterface;
 using Data.Interfaces.UserInterfaces;
 using Data.Repository;
 using Data.Repository.Biblioteca;
@@ -11,6 +12,7 @@ using Data.Repository.CatalogsRepository;
 using Data.Repository.DevPracticeRepository.CarritoDeComprasRepository;
 using Data.Repository.ReservaVehiculoRepository;
 using Data.Repository.TemplateRepository;
+using Data.Repository.TransaccionesEntreCuentaRepository;
 using Data.Repository.UtilitiesRepository;
 
 using LinkQuality.Data.Repository.SecurityRepository;
@@ -41,6 +43,10 @@ namespace Data
 
             services.AddScoped<ReservaInterface, ReservaRepository>();
             services.AddScoped<VehiculoInterface, VehiculoRepository>();
+
+            services.AddScoped<CuentaInterface, CuentaBancariaRepository>();
+            services.AddScoped<TransaccionesRepository, TransaccionesRepository>();
+            services.AddScoped<HistorialTransaccionesInterface, HistorialTransaccionesRepository>();
 
             services.AddScoped<ProductosInterface, ProductoRepository>();
             services.AddScoped<UsuarioInterface, UsuarioRepository>();

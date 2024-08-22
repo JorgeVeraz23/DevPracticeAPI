@@ -1,4 +1,5 @@
 ﻿using Data;
+using Data.Interfaces.TransaccionEntreCuentaInterface;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace LinkQuality.Data.Repository.SecurityRepository
 {
-    public class CuentaRepository
+    public class CuentaRepository 
     {
         protected readonly ApplicationDbContext _context;
         protected readonly IServiceProvider _serviceProvider;
