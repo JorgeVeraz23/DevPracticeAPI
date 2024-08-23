@@ -9,6 +9,6 @@ namespace Data.Interfaces.FormulasInterface
 {
     public interface FormulasInterface
     {
-        
+        public Task<int> GenerarNumeroUnicoCuentaBancaria();
     }
 }

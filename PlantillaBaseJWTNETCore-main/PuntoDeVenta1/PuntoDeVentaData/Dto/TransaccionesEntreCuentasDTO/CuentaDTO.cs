@@ -16,7 +16,7 @@ namespace Data.Dto.TransaccionesEntreCuentasDTO
         [MaxLength(100)]
         public string NombreTitular { get; set; } = "";
         [Required]
-        public string CedulaTitular { get; set; } = 0;
+        public string CedulaTitular { get; set; } = "";
         public EnumTipoCuenta TipoCuenta { get; set; }
         public decimal SaldoDisponible { get; set; }
     }

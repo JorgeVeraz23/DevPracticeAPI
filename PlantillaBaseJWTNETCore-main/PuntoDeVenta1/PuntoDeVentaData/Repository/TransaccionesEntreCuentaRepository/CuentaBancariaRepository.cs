@@ -60,37 +60,78 @@ namespace Data.Repository.TransaccionesEntreCuentaRepository
         {
             try
             {
-                Cuenta cuentaEntidad = new Cuenta();
+                var cuentaValidacion = await _context.Cuentas.Where(x => x.Active && x.CedulaTitular.ToUpper().Equals(cuenta.CedulaTitular.ToUpper())).FirstOrDefaultAsync() ;
 
-                cuentaEntidad.Active = true;
-                cuentaEntidad.NumeroCuenta = cuenta.NumeroCuenta;
-                cuentaEntidad.NombreTitular = cuenta.NombreTitular;
-                cuentaEntidad.CedulaTitular = cuenta.CedulaTitular;
-                cuentaEntidad.TipoCuenta = cuenta.TipoCuenta;
-                cuentaEntidad.SaldoDisponible = cuenta.SaldoDisponible;
+                if (cuentaValidacion != null)
+                {
+                   
+                    infoDTO.AccionFallida("Ya existe una cuenta para el usuario ingresado", 400);
+                    return infoDTO;
+                }
 
-                cuentaEntidad.DateRegister = DateTime.Now;
-                cuentaEntidad.UserRegister = _username;
-                cuentaEntidad.IpRegister = _ip;
+                if (cuenta.SaldoDisponible < 0)
+                {
+                    infoDTO.AccionFallida("No se puede crear una cuenta con saldo negativo", 400);
+                    return infoDTO;
+                }
 
+
+                Cuenta cuentaEntidad = new Cuenta
+                {
+                    Active = true,
+                    NumeroCuenta = cuenta.NumeroCuenta,
+                    CedulaTitular = cuenta.CedulaTitular,
+                    NombreTitular = cuenta.NombreTitular,
+                    TipoCuenta = cuenta.TipoCuenta,
+                    SaldoDisponible = cuenta.SaldoDisponible,
+                    DateRegister = DateTime.Now,
+                    UserRegister = _username,
+                    IpRegister = _ip
+                };
 
                 await _context.Cuentas.AddAsync(cuentaEntidad);
                 await _unitOfWorkRepository.SaveChangesAsync();
 
-                infoDTO.AccionCompletada("Se ha creadla la cuenta");
+                infoDTO.AccionCompletada("Se ha creado la cuenta");
                 return infoDTO;
-
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
-                throw new Exception("Error",ex);
+                throw new Exception("Error", ex);
             }
         }
 
-       
 
-        public Task<MessageInfoDTO> EliminarCuenta(long idCuenta)
+
+
+        public async Task<MessageInfoDTO> EliminarCuenta(long idCuenta)
         {
-            throw new NotImplementedException();
+            try { 
+
+                var cuentaToDelete = await _context.Cuentas.FirstOrDefaultAsync(x => x.IdCuenta == idCuenta);
+
+                if(cuentaToDelete == null)
+                {
+                    infoDTO.AccionFallida("No existe la cuenta a eliminar", 400);
+                    return infoDTO;
+                }
+
+
+                cuentaToDelete.Active = false;
+                cuentaToDelete.DateDelete = DateTime.Now;
+                cuentaToDelete.IpDelete = _ip;
+                cuentaToDelete.UserDelete = _username;
+
+                await _unitOfWorkRepository.SaveChangesAsync();
+
+                infoDTO.AccionCompletada("La cuenta se a eliminado exitosamente");
+                return infoDTO;
+
+
+            }catch(Exception ex)
+            {
+                throw new Exception("Error", ex);
+            }
         }
 
         public async Task<List<CuentaDTO>> MostrarCuentas()
