@@ -1,6 +1,7 @@
 ﻿using Data.Entities.Biblioteca;
 using Data.Entities.Configurations;
 using Data.Entities.DevPracticeEntities.CarritoDeComprasTutoEntities;
+using Data.Entities.MultiSelect;
 using Data.Entities.ReservaVehiculos;
 using Data.Entities.TransaccionesEntreCuentas;
 using LinkQuality.Data.Repository.UtilitiesRepository;
@@ -80,6 +81,22 @@ namespace Data
 
             modelBuilder.ConfigurationDefaultDataMenuRole();
             modelBuilder.ConfigurationDefaultDataEmailTemplate();
+
+            //Configuracion de relacion muchos a muchos
+            modelBuilder.Entity<UsuarioTag>()
+                .HasKey(ut => new { ut.IdTagMultiSelect, ut.IdUsuarioMultiSelect });
+
+            modelBuilder.Entity<UsuarioTag>()
+                .HasOne(ut => ut.UsuarioMultiSelect)
+                .WithMany(u => u.UsuarioTags)
+                .HasForeignKey(ut => ut.IdUsuarioMultiSelect);
+
+            modelBuilder.Entity<UsuarioTag>()
+                .HasOne(ut => ut.TagMultiSelect)
+                .WithMany(u => u.UsuarioTags)
+                .HasForeignKey(ut => ut.IdTagMultiSelect);
+
+
 
             
         }
