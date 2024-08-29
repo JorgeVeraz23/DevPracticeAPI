@@ -1,6 +1,7 @@
 ﻿using Data.Interfaces.BibliotecaInterfaces;
 using Data.Interfaces.CatalogsInterfaces;
 using Data.Interfaces.DevPracticesInterfaces.CarritoDeComprasInterface;
+using Data.Interfaces.MultiSelectInterface;
 using Data.Interfaces.ReservaVehiculoInterfaces;
 using Data.Interfaces.SecurityInterfaces;
 using Data.Interfaces.TemplateInterfaces;
@@ -10,6 +11,7 @@ using Data.Repository;
 using Data.Repository.Biblioteca;
 using Data.Repository.CatalogsRepository;
 using Data.Repository.DevPracticeRepository.CarritoDeComprasRepository;
+using Data.Repository.MultiSelectRepository;
 using Data.Repository.ReservaVehiculoRepository;
 using Data.Repository.TemplateRepository;
 using Data.Repository.TransaccionesEntreCuentaRepository;
@@ -64,6 +66,9 @@ namespace Data
 
             services.AddScoped<UserInterface, UserRepository>();
             services.AddScoped<GeneralCatalogsInterface, GeneralCatalogsRepository>();
+
+            services.AddScoped<UsuarioMultiSelectInterface, UsuarioMultiSelectRepository>();
+            services.AddScoped<TagMultiSelectInterface, TagMultiSelectRepository>();
 
             return services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))

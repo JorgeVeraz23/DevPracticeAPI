@@ -35,6 +35,9 @@ namespace Data
         public DbSet<Vehiculo> Vehiculos { get; set; }
         public DbSet<Cuenta> Cuentas { get;set; }
         public DbSet<Transacciones> Transacciones { get; set; }
+
+        public DbSet<UsuarioMultiSelect> UsuarioMultiSelects { get; set; }
+        public DbSet<TagMultiSelect> TagMultiSelects { get; set; }
         public DbSet<HistorialTransacciones> HistorialTransacciones { get; set; }
 
 
