@@ -37,7 +37,7 @@ namespace PuntoDeVentaAPI.Controllers.UsuarioMultiSelectController
         [HttpPost("AñadirTagsUsuario")]
         public async Task<ActionResult> AñadirTagsUsuario([FromBody] SaveTagsRequesDTO request)
         {
-            if (request.SelectedTagsId == null || request.SelectedTagsId.Any())
+            if (request.SelectedTagsId.Count <= 0)
                 return BadRequest("Debe seleccionar al menos un tag.");
             try
             {
@@ -50,6 +50,23 @@ namespace PuntoDeVentaAPI.Controllers.UsuarioMultiSelectController
             catch (Exception ex)
             {
                 return StatusCode(500, $"Error al guardar los tags: {ex.Message}");
+            }
+        }
+
+        [HttpPost("CrearUsuarioMultiSelect")]
+        public async Task<ActionResult> CrearUsuarioMultiSelect(UsuarioMultiSelectDTO usuarioMultiSelectDTO)
+        {
+            try
+            {
+                var response = await _usuarioMultiSelectInterface.CrearUsuarioMultiSelect(usuarioMultiSelectDTO);
+
+
+                return Ok(response);
+
+
+            }catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
 

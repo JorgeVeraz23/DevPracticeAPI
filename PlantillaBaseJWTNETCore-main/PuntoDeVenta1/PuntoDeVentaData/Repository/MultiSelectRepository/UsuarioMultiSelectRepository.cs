@@ -19,9 +19,36 @@ namespace Data.Repository.MultiSelectRepository
             _context = context;
         }
 
-        public Task<bool> CrearUsuarioMultiSelect(UsuarioMultiSelectDTO usuarioDto)
+        public async Task<bool> CrearUsuarioMultiSelect(UsuarioMultiSelectDTO usuarioDto)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var usuarioValidacion = await _context.UsuarioMultiSelects.Where(x => x.Nombre.ToUpper().Equals(usuarioDto.Nombre)).FirstOrDefaultAsync();
+
+                if (usuarioValidacion != null)
+                {
+                    return false;
+                }
+
+                UsuarioMultiSelect usuarioMultiSelect = new UsuarioMultiSelect
+                {
+                    Nombre = usuarioDto.Nombre,
+                    IpRegister = "xd",
+                    DateRegister = DateTime.Now,
+                    UserRegister = "Jorge"
+                };
+
+
+                await _context.UsuarioMultiSelects.AddAsync(usuarioMultiSelect);
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        
         }
 
         public async Task<UsuarioMultiSelectDTO> GetUsuarioByIdAsync(long idUsuarioMultiSelect)
@@ -30,7 +57,6 @@ namespace Data.Repository.MultiSelectRepository
             {
                 IdUsuarioTag = c.IdUsuarioTag,
                 Nombre = c.Nombre,
-                UsuarioTags = c.UsuarioTags,
             }
             ).FirstOrDefaultAsync() ?? new UsuarioMultiSelectDTO { };
 
@@ -39,15 +65,18 @@ namespace Data.Repository.MultiSelectRepository
 
         public async Task SaveSelectedTagsAsync(long idUsuarioMultiSelect, List<long> selectedTags)
         {
-            var usuario = await _context.UsuarioMultiSelects.Where(x => x.IdUsuarioTag == idUsuarioMultiSelect).FirstOrDefaultAsync();
+            //var usuario = await _context.UsuarioMultiSelects.Where(x => x.IdUsuarioTag == idUsuarioMultiSelect).FirstOrDefaultAsync();
 
-            if (usuario == null)
+            var usuario = await _context.UsuarioMultiSelects.Include(x => x.UsuarioTags).Where(x => x.IdUsuarioTag == idUsuarioMultiSelect)
+                .FirstOrDefaultAsync();
+
+            if (usuario.UsuarioTags == null)
             {
                 throw new KeyNotFoundException("Usuario no encontrado");
             }
 
             //Limpiar las relaciones existentes
-            usuario.UsuarioTags!.Clear();
+            usuario.UsuarioTags.Clear();
 
             //Agregar nuevas relaciones
             foreach (var tagId in selectedTags)

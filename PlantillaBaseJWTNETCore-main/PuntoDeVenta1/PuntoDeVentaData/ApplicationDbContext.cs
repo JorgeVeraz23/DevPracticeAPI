@@ -38,6 +38,7 @@ namespace Data
 
         public DbSet<UsuarioMultiSelect> UsuarioMultiSelects { get; set; }
         public DbSet<TagMultiSelect> TagMultiSelects { get; set; }
+        public DbSet<UsuarioTag> UsuarioTags { get; set; }
         public DbSet<HistorialTransacciones> HistorialTransacciones { get; set; }
 
 

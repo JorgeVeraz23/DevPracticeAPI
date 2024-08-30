@@ -13,7 +13,6 @@ namespace Data.Dto.MultiSelectDTO
         public long IdUsuarioTag { get; set; }
         public string Nombre { get; set; }
 
-        public virtual ICollection<UsuarioTag>? UsuarioTags { get; set; }
 
     }
 }
