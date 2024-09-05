@@ -1,6 +1,7 @@
 ﻿using Data.Entities.Biblioteca;
 using Data.Entities.Configurations;
 using Data.Entities.DevPracticeEntities.CarritoDeComprasTutoEntities;
+using Data.Entities.KPIEntity;
 using Data.Entities.MultiSelect;
 using Data.Entities.ReservaVehiculos;
 using Data.Entities.TransaccionesEntreCuentas;
@@ -26,7 +27,9 @@ namespace Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { 
         
         }
-
+        
+        
+        public DbSet<KPIEntity> KPIEntities { get; set; }
         public DbSet<Prestamos> Prestamos { get; set; }
         public DbSet<UsuarioBiblioteca> UsuarioBibliotecas { get; set; }
         public DbSet<Libro> Libros { get; set; }

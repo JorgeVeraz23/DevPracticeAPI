@@ -1,6 +1,7 @@
 ﻿using Data.Interfaces.BibliotecaInterfaces;
 using Data.Interfaces.CatalogsInterfaces;
 using Data.Interfaces.DevPracticesInterfaces.CarritoDeComprasInterface;
+using Data.Interfaces.IKPIRepository;
 using Data.Interfaces.MultiSelectInterface;
 using Data.Interfaces.ReservaVehiculoInterfaces;
 using Data.Interfaces.SecurityInterfaces;
@@ -11,6 +12,7 @@ using Data.Repository;
 using Data.Repository.Biblioteca;
 using Data.Repository.CatalogsRepository;
 using Data.Repository.DevPracticeRepository.CarritoDeComprasRepository;
+using Data.Repository.KPIRepository;
 using Data.Repository.MultiSelectRepository;
 using Data.Repository.ReservaVehiculoRepository;
 using Data.Repository.TemplateRepository;
@@ -39,6 +41,8 @@ namespace Data
         public static IServiceCollection DependencyEF(this IServiceCollection services, IConfiguration configuration)
         {
 
+
+            services.AddScoped<IKPIRepository, KPIRepository>();
             services.AddScoped<PrestamoInterface, PrestamoRepository>();
             services.AddScoped<AutorInterface, AutorRepository>();
             services.AddScoped<LibroInterface,LibroRepository>();

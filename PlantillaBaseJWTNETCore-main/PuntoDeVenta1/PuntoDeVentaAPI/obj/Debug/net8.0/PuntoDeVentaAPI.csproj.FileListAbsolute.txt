@@ -505,9 +505,6 @@ C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNE
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
@@ -535,3 +532,9 @@ C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNE
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.pdb
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\PuntoDeVentaAPI.genruntimeconfig.cache
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\obj\Debug\net8.0\ref\PuntoDeVentaAPI.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\EPPlus.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\EPPlus.Interfaces.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
