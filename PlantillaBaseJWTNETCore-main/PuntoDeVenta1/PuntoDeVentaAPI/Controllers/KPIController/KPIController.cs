@@ -22,6 +22,49 @@ namespace PuntoDeVentaAPI.Controllers.KPIController
             _repository = repository;
         }
 
+
+        [HttpGet("descargarExcel")]
+        public async Task<IActionResult> DescargarExcel()
+        {
+            var kpis = await _repository.obtenerKPIAsync();
+
+            using(var workbook = new XLWorkbook())
+            {
+                var worksheet = workbook.Worksheets.Add("KPIs");
+
+                //Crear encabezados
+                worksheet.Cell(1, 1).Value = "Nombre";
+                worksheet.Cell(1, 2).Value = "Valor";
+                worksheet.Cell(1, 3).Value = "Fecha";
+
+                int currentRow = 2;
+
+                foreach(var kpi in kpis)
+                {
+                    worksheet.Cell(currentRow, 1).Value = kpi.Nombre;
+                    worksheet.Cell(currentRow, 2).Value = kpi.Valor;
+                    worksheet.Cell(currentRow, 2).Value = kpi.Fecha.ToString("yyyy-MM-dd");
+                    currentRow++;
+                }
+
+                using(var stream = new MemoryStream())
+                {
+                    workbook.SaveAs(stream);
+                    stream.Seek(0, SeekOrigin.Begin);
+
+                    // Asegurar que el nombre del archivo sea seguro y válido
+                    var safeFileName = $"KPIs_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+
+                    return File(stream.ToArray(),
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                safeFileName);
+                }
+            }
+        }
+
+
+
+
         //Con CLOSEDXML
         [HttpPost("cargarMasivadeArchivoExcelClosedXML")]
         public async Task<IActionResult> cargarMasivadeArchivoExcelClosedXML(IFormFile archivo)

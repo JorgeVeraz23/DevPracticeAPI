@@ -1,5 +1,6 @@
 ﻿using Data.Entities.KPIEntity;
 using Data.Interfaces.IKPIRepository;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +21,18 @@ namespace Data.Repository.KPIRepository
 
         }
 
+
+      
+
         public async Task CargaMasivaAsync(IEnumerable<KPIEntity> kpis)
         {
             await _context.KPIEntities.AddRangeAsync(kpis);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<KPIEntity>> obtenerKPIAsync()
+        {
+            return await _context.KPIEntities.ToListAsync();
         }
     }
 }
