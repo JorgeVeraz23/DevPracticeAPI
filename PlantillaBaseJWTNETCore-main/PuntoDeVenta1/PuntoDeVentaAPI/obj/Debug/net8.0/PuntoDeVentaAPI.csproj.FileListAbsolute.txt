@@ -538,3 +538,11 @@ C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNE
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\FluentAssertions.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\xunit.abstractions.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\xunit.assert.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\xunit.core.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaAPI\bin\Debug\net8.0\xunit.execution.dotnet.dll

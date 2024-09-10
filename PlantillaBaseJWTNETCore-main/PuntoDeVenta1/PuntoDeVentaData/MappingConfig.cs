@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Data.Dto.DtoExampleDTO;
+using Data.Entities.DtoExample;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +15,11 @@ namespace Data
         {
             var mappingConfig = new MapperConfiguration(config =>
             {
-                //config.CreateMap<GroupQuestionFormDTO, GroupQuestionForm>();
-                //config.CreateMap<GroupQuestionForm, GroupQuestionFormDTO>();
-                //config.CreateMap<QuestionsForm, QuestionFormDTO>();
+                
+                config.CreateMap<Order, OrderDto>();
+                config.CreateMap<Cliente, ClienteDto>();
+                config.CreateMap<OrderDetail, OrderDetailDto>()
+                    .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name));
             });
             return mappingConfig;
         }

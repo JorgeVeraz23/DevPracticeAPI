@@ -1,10 +1,12 @@
 ﻿using Data.Entities.Biblioteca;
 using Data.Entities.Configurations;
 using Data.Entities.DevPracticeEntities.CarritoDeComprasTutoEntities;
+using Data.Entities.DtoExample;
 using Data.Entities.KPIEntity;
 using Data.Entities.MultiSelect;
 using Data.Entities.ReservaVehiculos;
 using Data.Entities.TransaccionesEntreCuentas;
+using Data.Entities.UnitTest;
 using LinkQuality.Data.Repository.UtilitiesRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -28,7 +30,14 @@ namespace Data
         
         }
         
-        
+
+
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set;}
+        public DbSet<LoanApplication> LoanApplications { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         public DbSet<KPIEntity> KPIEntities { get; set; }
         public DbSet<Prestamos> Prestamos { get; set; }
         public DbSet<UsuarioBiblioteca> UsuarioBibliotecas { get; set; }
