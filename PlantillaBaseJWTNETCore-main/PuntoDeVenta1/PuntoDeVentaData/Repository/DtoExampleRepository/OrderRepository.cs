@@ -21,16 +21,7 @@ namespace Data.Repository.DtoExampleRepository
 
         public async Task<Order> GetOrder(long id)
         {
-            if (id <= 0)
-            {
-                throw new ArgumentException("Invalid ID", nameof(id));
-            }
-
-            if (_context == null)
-            {
-                throw new InvalidOperationException("DbContext is not initialized.");
-            }
-
+            
             var order = await _context.Orders
                 .Include(o => o.Cliente)
                 .Include(o => o.OrderDetails)
@@ -39,10 +30,50 @@ namespace Data.Repository.DtoExampleRepository
 
             if (order == null)
             {
-                // Log or handle the fact that the order was not found
+                return null;
             }
 
             return order ?? new Order();
+
+        }
+
+
+
+
+
+
+
+
+        public async Task<OrderDto> GetOrderWithoutMapper(long id)
+        {
+            //Obtener la orden con los detalles y el cliente
+            var order = await _context.Orders
+                .Include(o => o.Cliente)
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (order == null) { return null;  }
+                
+
+            //Convertir la entidad Order a OrderDto manualmente
+            var orderDto = new OrderDto
+            {
+                Id = order.Id,
+                OrderDate = order.OrderDate,
+                CustomerName = order.Cliente!.Name, //Convertir Cliente.Name a CustomerName
+                OrderDetails = order.OrderDetails.Select(od => new OrderDetailDto
+                {
+                    ProductId = od.ProductId,
+                    ProductName = od.Product.Name != null ? od.Product.Name : "Producto no disponible", // Manejar la posibilidad de un Product nulo
+                    Quantity = od.Quantity,
+                    TotalPrice = od.TotalPrice,
+                }).ToList()
+            };
+
+            return orderDto;
+
+
 
         }
     }

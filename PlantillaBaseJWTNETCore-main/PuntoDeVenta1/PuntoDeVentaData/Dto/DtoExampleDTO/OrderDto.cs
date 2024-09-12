@@ -10,7 +10,7 @@ namespace Data.Dto.DtoExampleDTO
     {
         public long Id { get; set; }
         public DateTime OrderDate { get; set; }
-        public ClienteDto Customer { get; set; }
+        public string CustomerName { get; set; } // Propiedad para almacenar el nombre del cliente
         public List<OrderDetailDto>? OrderDetails { get; set; }
     }
 }

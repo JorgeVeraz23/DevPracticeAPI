@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9c7Gb5+kEzmfAHQrX5oRH/lXS+c7n1nBjV3hadjArzDnE2zwv5hv6im3oIKxTsyOq4PdzVvwY8Z3lq8DOdPr5g==",
+  "dgSpecHash": "KNikTCVUdhhGGvWYoIVSAcJkuaeiKVpwtUvqmm1o94jISCcofxGsBiuJ/SHpoZugUlgdsghcJnBI/dUlV6OQ4g==",
   "success": true,
   "projectFilePath": "C:\\Users\\AppDev\\Documents\\Repo\\DevPracticesAPI\\DevPracticeAPI\\PlantillaBaseJWTNETCore-main\\PuntoDeVenta1\\PuntoDeVentaAPI\\PuntoDeVentaAPI.csproj",
   "expectedPackageFiles": [
@@ -120,6 +120,7 @@
     "C:\\Users\\AppDev\\.nuget\\packages\\sixlabors.fonts\\1.0.0\\sixlabors.fonts.1.0.0.nupkg.sha512",
     "C:\\Users\\AppDev\\.nuget\\packages\\sixlabors.imagesharp\\3.1.5\\sixlabors.imagesharp.3.1.5.nupkg.sha512",
     "C:\\Users\\AppDev\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "C:\\Users\\AppDev\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.6.2\\swashbuckle.aspnetcore.annotations.6.6.2.nupkg.sha512",
     "C:\\Users\\AppDev\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\AppDev\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "C:\\Users\\AppDev\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",

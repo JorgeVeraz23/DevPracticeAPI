@@ -43,6 +43,8 @@ namespace Data
         public static IServiceCollection DependencyEF(this IServiceCollection services, IConfiguration configuration)
         {
 
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<OrderInterface, OrderRepository>();
             services.AddScoped<IKPIRepository, KPIRepository>();
             services.AddScoped<PrestamoInterface, PrestamoRepository>();

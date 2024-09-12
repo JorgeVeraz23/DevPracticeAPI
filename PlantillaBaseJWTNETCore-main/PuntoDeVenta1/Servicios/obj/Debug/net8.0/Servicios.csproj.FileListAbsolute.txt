@@ -27,6 +27,9 @@ C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDe
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\obj\Debug\net8.0\Servicios.pdb
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\obj\Debug\net8.0\Servicios.genruntimeconfig.cache
 C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\obj\Debug\net8.0\ref\Servicios.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\bin\Debug\net8.0\Servicios.deps.json
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\bin\Debug\net8.0\Servicios.runtimeconfig.json
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\bin\Debug\net8.0\Servicios.dll
@@ -42,6 +45,3 @@ C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNE
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\obj\Debug\net8.0\Servicios.pdb
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\obj\Debug\net8.0\Servicios.genruntimeconfig.cache
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\obj\Debug\net8.0\ref\Servicios.dll
-C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll
-C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
-C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\Servicios\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll

@@ -51,7 +51,7 @@ namespace PuntoDeVentaAPI.Services
             }).AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
             // APPLICATION DB CONTEXT
             services.DependencyEF(Configuration);
-            IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+            
             /***************/
             /*Culture Info*/
             /***************/
@@ -132,14 +132,14 @@ namespace PuntoDeVentaAPI.Services
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "LinqQuality.WebApi",
+                    Title = "DevPracticas API",
                     Version = "v1",
-                    Description = "API RESTful para el sistema de navieras",
+                    Description = "API diseñada unicamente para practicar",
                     Contact = new OpenApiContact
                     {
-                        Email = "soporte@apptelink.com",
-                        Name = "Apptelink",
-                        Url = new Uri("https://apptelink.com")
+                        Email = "jorgeverazambrano@outlook.com",
+                        Name = "Jorge Vera",
+                        Url = new Uri("https://linkfalso.com")
                     },
                 });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -165,18 +165,9 @@ namespace PuntoDeVentaAPI.Services
                         Array.Empty<string>()
                     }
                 });
-                //var archivoXML = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                //var rutaXML = Path.Combine(AppContext.BaseDirectory, archivoXML);
-                //c.IncludeXmlComments(rutaXML);
-                //Omitir Endpoint que no pueden ser mapeados por swagger
-                //c.DocInclusionPredicate((docName, apiDesc) => !new[] {
-                //        (typeof(PruebasController), "Respuestas"),
-                //       // (typeof(OtroControlador), "OtroMetodo")
-                //      }.Any(t =>
-                //      {
-                //          var methodInfo = apiDesc.TryGetMethodInfo(out var info) ? info : null;
-                //          return methodInfo != null && t.Item1 == methodInfo.DeclaringType && t.Item2 == methodInfo.Name;
-                //      }));
+                var archivoXML = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var rutaXML = Path.Combine(AppContext.BaseDirectory, archivoXML);
+                c.IncludeXmlComments(rutaXML);
             });
             services.AddAutoMapper(typeof(Startup));
             //services.AddScoped<MapperHelper>();
@@ -255,7 +246,7 @@ namespace PuntoDeVentaAPI.Services
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Naviera.API v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "DevPractices.API v1");
             });
             app.UseRouting();
 
