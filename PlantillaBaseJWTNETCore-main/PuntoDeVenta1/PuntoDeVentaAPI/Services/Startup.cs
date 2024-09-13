@@ -23,6 +23,7 @@ using PuntoDeVentaAPI.Services;
 using PuntoDeVentaData.Entities.Security;
 using Data;
 using PuntoDeVentaAPI.Filters;
+using OfficeOpenXml;
 
 namespace PuntoDeVentaAPI.Services
 {
@@ -42,6 +43,7 @@ namespace PuntoDeVentaAPI.Services
 
         public void ConfigureServices(IServiceCollection services)
         {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
             services.AddControllers(opciones =>
             {

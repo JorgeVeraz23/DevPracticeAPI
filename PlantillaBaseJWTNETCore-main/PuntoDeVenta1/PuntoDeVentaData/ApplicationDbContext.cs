@@ -4,6 +4,7 @@ using Data.Entities.DevPracticeEntities.CarritoDeComprasTutoEntities;
 using Data.Entities.DtoExample;
 using Data.Entities.KPIEntity;
 using Data.Entities.MultiSelect;
+using Data.Entities.Prueba;
 using Data.Entities.ReservaVehiculos;
 using Data.Entities.TransaccionesEntreCuentas;
 using Data.Entities.UnitTest;
@@ -84,6 +85,8 @@ namespace Data
         public virtual DbSet<ParameterType> ParameterTypes { get; set; }
         #endregion
 
+
+        public virtual DbSet<Book> Book { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -97,6 +100,7 @@ namespace Data
 
             modelBuilder.ConfigurationDefaultDataMenuRole();
             modelBuilder.ConfigurationDefaultDataEmailTemplate();
+
 
             //Configuracion de relacion muchos a muchos
             modelBuilder.Entity<UsuarioTag>()
@@ -112,9 +116,11 @@ namespace Data
                 .WithMany(u => u.UsuarioTags)
                 .HasForeignKey(ut => ut.IdTagMultiSelect);
 
+            modelBuilder.Entity<Book>()
+               .HasIndex(b => b.Codigo)
+               .IsUnique();
 
 
-            
         }
 
         public override int SaveChanges()
