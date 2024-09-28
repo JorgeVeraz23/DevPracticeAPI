@@ -45,3 +45,6 @@ C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNE
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaData\obj\Debug\net8.0\Data.pdb
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaData\obj\Debug\net8.0\Data.genruntimeconfig.cache
 C:\Users\AppDev\Documents\Repo\DevPracticesAPI\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaData\obj\Debug\net8.0\ref\Data.dll
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaData\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaData\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\USER\Documents\repo\DevPracticeAPI\PlantillaBaseJWTNETCore-main\PuntoDeVenta1\PuntoDeVentaData\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll

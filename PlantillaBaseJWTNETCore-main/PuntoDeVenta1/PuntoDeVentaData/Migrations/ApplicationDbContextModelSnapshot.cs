@@ -80,7 +80,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdAutor");
 
-                    b.ToTable("Autors");
+                    b.ToTable("Autors", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.Biblioteca.Libro", b =>
@@ -144,7 +144,7 @@ namespace Data.Migrations
 
                     b.HasIndex("AutorIdAutor");
 
-                    b.ToTable("Libros");
+                    b.ToTable("Libros", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.Biblioteca.Prestamos", b =>
@@ -211,7 +211,7 @@ namespace Data.Migrations
 
                     b.HasIndex("UsuarioBibliotecaIdUsuario");
 
-                    b.ToTable("Prestamos");
+                    b.ToTable("Prestamos", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.Biblioteca.UsuarioBiblioteca", b =>
@@ -272,7 +272,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdUsuario");
 
-                    b.ToTable("UsuarioBibliotecas");
+                    b.ToTable("UsuarioBibliotecas", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.Configurations.ApplicationVersion", b =>
@@ -333,7 +333,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdApplicationVersion");
 
-                    b.ToTable("ApplicationVersions");
+                    b.ToTable("ApplicationVersions", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.DevPracticeEntities.CarritoDeComprasTutoEntities.Productos", b =>
@@ -395,7 +395,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdProductos");
 
-                    b.ToTable("Productos");
+                    b.ToTable("Productos", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.DevPracticeEntities.CarritoDeComprasTutoEntities.Usuarios", b =>
@@ -462,7 +462,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdUsuario");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuarios", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.DtoExample.Cliente", b =>
@@ -525,7 +525,7 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Clientes");
+                    b.ToTable("Clientes", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.DtoExample.Order", b =>
@@ -584,7 +584,7 @@ namespace Data.Migrations
 
                     b.HasIndex("ClienteId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.DtoExample.OrderDetail", b =>
@@ -651,7 +651,7 @@ namespace Data.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderDetails");
+                    b.ToTable("OrderDetails", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.DtoExample.Product", b =>
@@ -709,7 +709,7 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.KPIEntity.KPIEntity", b =>
@@ -732,7 +732,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdKPI");
 
-                    b.ToTable("KPIEntities");
+                    b.ToTable("KPIEntities", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.MultiSelect.TagMultiSelect", b =>
@@ -787,7 +787,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdTag");
 
-                    b.ToTable("TagMultiSelects");
+                    b.ToTable("TagMultiSelects", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.MultiSelect.UsuarioMultiSelect", b =>
@@ -842,7 +842,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdUsuarioTag");
 
-                    b.ToTable("UsuarioMultiSelects");
+                    b.ToTable("UsuarioMultiSelects", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.MultiSelect.UsuarioTag", b =>
@@ -895,7 +895,7 @@ namespace Data.Migrations
 
                     b.HasIndex("IdUsuarioMultiSelect");
 
-                    b.ToTable("UsuarioTags");
+                    b.ToTable("UsuarioTags", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.Prueba.Book", b =>
@@ -1035,7 +1035,7 @@ namespace Data.Migrations
 
                     b.HasIndex("IdVehiculo");
 
-                    b.ToTable("Reservas");
+                    b.ToTable("Reservas", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.ReservaVehiculos.Vehiculo", b =>
@@ -1102,7 +1102,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdVehiculo");
 
-                    b.ToTable("Vehiculos");
+                    b.ToTable("Vehiculos", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.TransaccionesEntreCuentas.Cuenta", b =>
@@ -1171,7 +1171,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdCuenta");
 
-                    b.ToTable("Cuentas");
+                    b.ToTable("Cuentas", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.TransaccionesEntreCuentas.HistorialTransacciones", b =>
@@ -1222,7 +1222,7 @@ namespace Data.Migrations
 
                     b.HasKey("idHistorialTransacciones");
 
-                    b.ToTable("HistorialTransacciones");
+                    b.ToTable("HistorialTransacciones", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.TransaccionesEntreCuentas.Transacciones", b =>
@@ -1295,7 +1295,7 @@ namespace Data.Migrations
 
                     b.HasIndex("IdCuenta");
 
-                    b.ToTable("Transacciones");
+                    b.ToTable("Transacciones", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.UnitTest.Customer", b =>
@@ -1315,7 +1315,7 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.UnitTest.LoanApplication", b =>
@@ -1339,7 +1339,7 @@ namespace Data.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("LoanApplications");
+                    b.ToTable("LoanApplications", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -1516,7 +1516,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdTypeParameter");
 
-                    b.ToTable("ParameterTypes");
+                    b.ToTable("ParameterTypes", (string)null);
 
                     b.HasData(
                         new
@@ -1620,7 +1620,7 @@ namespace Data.Migrations
 
                     b.HasIndex("TypeParameterIdTypeParameter");
 
-                    b.ToTable("Parameters");
+                    b.ToTable("Parameters", (string)null);
 
                     b.HasData(
                         new
@@ -1984,7 +1984,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdAuditoryAccess");
 
-                    b.ToTable("AuditoryAccesses");
+                    b.ToTable("AuditoryAccesses", (string)null);
                 });
 
             modelBuilder.Entity("PuntoDeVentaData.Entities.Security.Menu", b =>
@@ -2109,7 +2109,7 @@ namespace Data.Migrations
 
                     b.HasIndex("IdMenuFather");
 
-                    b.ToTable("Menus");
+                    b.ToTable("Menus", (string)null);
 
                     b.HasData(
                         new
@@ -2387,7 +2387,7 @@ namespace Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("MenuRoles");
+                    b.ToTable("MenuRoles", (string)null);
 
                     b.HasData(
                         new
@@ -2516,7 +2516,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdEmailTemplate");
 
-                    b.ToTable("EmailTemplates");
+                    b.ToTable("EmailTemplates", (string)null);
 
                     b.HasData(
                         new
@@ -2604,7 +2604,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdBucketFile");
 
-                    b.ToTable("BucketFiles");
+                    b.ToTable("BucketFiles", (string)null);
                 });
 
             modelBuilder.Entity("PuntoDeVentaData.Entities.Utilities.Logs", b =>
@@ -2662,7 +2662,7 @@ namespace Data.Migrations
 
                     b.HasKey("IdLog");
 
-                    b.ToTable("Logs");
+                    b.ToTable("Logs", (string)null);
                 });
 
             modelBuilder.Entity("PuntoDeVentaData.Entities.Utilities.Notificacion", b =>
@@ -2741,7 +2741,7 @@ namespace Data.Migrations
 
                     b.HasIndex("userOrigenId");
 
-                    b.ToTable("Notificacions");
+                    b.ToTable("Notificacions", (string)null);
                 });
 
             modelBuilder.Entity("Data.Entities.Biblioteca.Libro", b =>
