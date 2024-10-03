@@ -2,6 +2,7 @@
 using Data.Entities.Configurations;
 using Data.Entities.DevPracticeEntities.CarritoDeComprasTutoEntities;
 using Data.Entities.DtoExample;
+using Data.Entities.ExampleUseCallBackUseFetch;
 using Data.Entities.KPIEntity;
 using Data.Entities.MultiSelect;
 using Data.Entities.Prueba;
@@ -53,6 +54,7 @@ namespace Data
         public DbSet<TagMultiSelect> TagMultiSelects { get; set; }
         public DbSet<UsuarioTag> UsuarioTags { get; set; }
         public DbSet<HistorialTransacciones> HistorialTransacciones { get; set; }
+        public DbSet<Usuario> Usuarioss { get; set; }
 
 
         #region 

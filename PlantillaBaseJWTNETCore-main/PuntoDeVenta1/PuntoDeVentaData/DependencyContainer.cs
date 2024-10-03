@@ -2,6 +2,7 @@
 using Data.Interfaces.CatalogsInterfaces;
 using Data.Interfaces.DevPracticesInterfaces.CarritoDeComprasInterface;
 using Data.Interfaces.DtoExampleInterface;
+using Data.Interfaces.ExampleUseCallBackUseFetch;
 using Data.Interfaces.IKPIRepository;
 using Data.Interfaces.MultiSelectInterface;
 using Data.Interfaces.ReservaVehiculoInterfaces;
@@ -14,6 +15,7 @@ using Data.Repository.Biblioteca;
 using Data.Repository.CatalogsRepository;
 using Data.Repository.DevPracticeRepository.CarritoDeComprasRepository;
 using Data.Repository.DtoExampleRepository;
+using Data.Repository.ExampleUseCallBackUseMemo;
 using Data.Repository.KPIRepository;
 using Data.Repository.MultiSelectRepository;
 using Data.Repository.ReservaVehiculoRepository;
@@ -50,6 +52,7 @@ namespace Data
             services.AddScoped<PrestamoInterface, PrestamoRepository>();
             services.AddScoped<AutorInterface, AutorRepository>();
             services.AddScoped<LibroInterface,LibroRepository>();
+            services.AddScoped<UsuarioNewInterface, UsuarioNewRepository>();
 
             services.AddScoped<ReservaInterface, ReservaRepository>();
             services.AddScoped<VehiculoInterface, VehiculoRepository>();
