@@ -98,11 +98,11 @@ namespace Data.Repository.ExampleUseCallBackUseMemo
 
         public async Task<MessageInfoDTO> Create(UsuarioExampleDTO usuarioExampleDTO)
         {
-            var infoDTO = new MessageInfoDTO(); // Asegúrate de inicializar infoDTO
+            var infoDTO = new MessageInfoDTO();
 
             try
             {
-                // Validación opcional (ejemplo: asegurarse de que los campos no están vacíos)
+                // Validación opcional
                 if (string.IsNullOrWhiteSpace(usuarioExampleDTO.Nombre))
                 {
                     infoDTO.Status = 400;
@@ -128,20 +128,20 @@ namespace Data.Repository.ExampleUseCallBackUseMemo
                 await _context.Usuarioss.AddAsync(usuarioNew);
                 await _context.SaveChangesAsync();
 
-                // Respuesta exitosa
+                // Modifica aquí para devolver también el usuario creado
                 infoDTO.Status = 201;
                 infoDTO.Message = "Usuario creado exitosamente";
+                infoDTO.Detail = usuarioNew; // Agregamos el usuario recién creado a la respuesta
                 return infoDTO;
             }
             catch (Exception ex)
             {
-                // Manejo de errores (log, mensaje de error genérico para no exponer detalles técnicos)
                 infoDTO.Status = 500;
                 infoDTO.Message = "Ocurrió un error al crear el usuario.";
-                // Log el detalle del error (ex) si es necesario para depuración
                 return infoDTO;
             }
         }
+
 
 
         public async Task<MessageInfoDTO> Delete(long id)
